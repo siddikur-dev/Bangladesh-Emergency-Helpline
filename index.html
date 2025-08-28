@@ -40,8 +40,8 @@
                     <span class="px-2 font-bold text-sm sm:text-base">100</span>
                     <img class="w-4" src="./assets/coin.png" alt="">
                 </div>
-                <div class="rounded-3xl py-2 px-3 bg-green-600 text-white border-none text-sm sm:text-base">
-                    2 Copy
+                <div id="allCopied" class="rounded-3xl py-2 px-3 bg-green-600 text-white border-none text-sm sm:text-base">
+                    0 Copy
                 </div>
             </div>
         </div>
@@ -61,7 +61,6 @@
         </div>
     </header>
     <!-- empty -->
-    
 
     <!--  -->
 
@@ -73,11 +72,13 @@
             <div class="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <!-- Emergency Service  -->
                 <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
-                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart">
-        <path
-            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
-    </svg>
+                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-heart-icon lucide-heart">
+                            <path
+                                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                        </svg>
                     </button>
                     <div class="card-body">
                         <div class="flex items-center gap-3">
@@ -89,18 +90,32 @@
                             </div>
                         </div>
                         <p class="text-xl md:text-2xl font-bold mt-4">999</p>
-                        <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
-                                class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
+                        <div class="flex gap-2 mt-4">
+                            <button class="btn btn-sm copyText ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-files-icon lucide-files">
+                                    <path
+                                        d="M15 2a2 2 0 0 1 1.414.586l4 4A2 2 0 0 1 21 8v7a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
+                                    <path d="M15 2v4a2 2 0 0 0 2 2h4" />
+                                    <path d="M5 7a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 1.732-1" />
+                                </svg>
+                                Copy
+                            </button>
+                            <button class="btn btn-sm bg-green-600 text-white">📞 Call</button>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Police  -->
                 <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
-                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart">
-        <path
-            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
-    </svg>
+                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-heart-icon lucide-heart">
+                            <path
+                                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                        </svg>
                     </button>
                     <div class="card-body">
                         <div class="flex items-center gap-3">
@@ -112,17 +127,29 @@
                             </div>
                         </div>
                         <p class="text-xl md:text-2xl font-bold mt-4">999</p>
-                        <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
+                        <div class="flex gap-2 mt-4">  <button class="btn btn-sm copyText">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-files-icon lucide-files">
+                                    <path
+                                        d="M15 2a2 2 0 0 1 1.414.586l4 4A2 2 0 0 1 21 8v7a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
+                                    <path d="M15 2v4a2 2 0 0 0 2 2h4" />
+                                    <path d="M5 7a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 1.732-1" />
+                                </svg>
+                                Copy
+                            </button> <button
                                 class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
                     </div>
                 </div>
                 <!-- Fire Service & Civil   -->
                 <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
-                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart">
-        <path
-            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
-    </svg>
+                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-heart-icon lucide-heart">
+                            <path
+                                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                        </svg>
                     </button>
                     <div class="card-body">
                         <div class="flex items-center gap-3">
@@ -135,17 +162,29 @@
                             </div>
                         </div>
                         <p class="text-xl md:text-2xl font-bold mt-4">16163</p>
-                        <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
+                        <div class="flex gap-2 mt-4">  <button class="btn btn-sm copyText">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-files-icon lucide-files">
+                                    <path
+                                        d="M15 2a2 2 0 0 1 1.414.586l4 4A2 2 0 0 1 21 8v7a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
+                                    <path d="M15 2v4a2 2 0 0 0 2 2h4" />
+                                    <path d="M5 7a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 1.732-1" />
+                                </svg>
+                                Copy
+                            </button> <button
                                 class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
                     </div>
                 </div>
                 <!-- Ambulance  -->
                 <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
-                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart">
-        <path
-            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
-    </svg>
+                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-heart-icon lucide-heart">
+                            <path
+                                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                        </svg>
                     </button>
                     <div class="card-body">
                         <div class="flex items-center gap-3">
@@ -157,17 +196,29 @@
                             </div>
                         </div>
                         <p class="text-xl md:text-2xl font-bold mt-4">9331431</p>
-                        <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
+                        <div class="flex gap-2 mt-4">  <button class="btn btn-sm copyText">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-files-icon lucide-files">
+                                    <path
+                                        d="M15 2a2 2 0 0 1 1.414.586l4 4A2 2 0 0 1 21 8v7a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
+                                    <path d="M15 2v4a2 2 0 0 0 2 2h4" />
+                                    <path d="M5 7a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 1.732-1" />
+                                </svg>
+                                Copy
+                            </button> <button
                                 class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
                     </div>
                 </div>
                 <!-- Railway Central Helpline  -->
                 <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
-                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart">
-        <path
-            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
-    </svg>
+                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-heart-icon lucide-heart">
+                            <path
+                                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                        </svg>
                     </button>
                     <div class="card-body">
                         <div class="flex items-center gap-3">
@@ -179,17 +230,29 @@
                             </div>
                         </div>
                         <p class="text-xl md:text-2xl font-bold mt-4">131</p>
-                        <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
+                        <div class="flex gap-2 mt-4">  <button class="btn btn-sm copyText">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-files-icon lucide-files">
+                                    <path
+                                        d="M15 2a2 2 0 0 1 1.414.586l4 4A2 2 0 0 1 21 8v7a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
+                                    <path d="M15 2v4a2 2 0 0 0 2 2h4" />
+                                    <path d="M5 7a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 1.732-1" />
+                                </svg>
+                                Copy
+                            </button> <button
                                 class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
                     </div>
                 </div>
                 <!-- child and women support  -->
                 <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
-                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart">
-        <path
-            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
-    </svg>
+                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-heart-icon lucide-heart">
+                            <path
+                                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                        </svg>
                     </button>
                     <div class="card-body">
                         <div class="flex items-center gap-3">
@@ -201,7 +264,17 @@
                             </div>
                         </div>
                         <p class="text-xl md:text-2xl font-bold mt-4">10921</p>
-                        <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
+                        <div class="flex gap-2 mt-4">  <button class="btn btn-sm copyText">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-files-icon lucide-files">
+                                    <path
+                                        d="M15 2a2 2 0 0 1 1.414.586l4 4A2 2 0 0 1 21 8v7a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
+                                    <path d="M15 2v4a2 2 0 0 0 2 2h4" />
+                                    <path d="M5 7a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 1.732-1" />
+                                </svg>
+                                Copy
+                            </button> <button
                                 class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
                     </div>
                 </div>
@@ -209,11 +282,13 @@
 
                 <!-- Brack  -->
                 <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
-                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart">
-        <path
-            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
-    </svg>
+                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-heart-icon lucide-heart">
+                            <path
+                                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                        </svg>
                     </button>
                     <div class="card-body">
                         <div class="flex items-center gap-3">
@@ -225,17 +300,29 @@
                             </div>
                         </div>
                         <p class="text-xl md:text-2xl font-bold mt-4">612</p>
-                        <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
+                        <div class="flex gap-2 mt-4">  <button class="btn btn-sm copyText">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-files-icon lucide-files">
+                                    <path
+                                        d="M15 2a2 2 0 0 1 1.414.586l4 4A2 2 0 0 1 21 8v7a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
+                                    <path d="M15 2v4a2 2 0 0 0 2 2h4" />
+                                    <path d="M5 7a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 1.732-1" />
+                                </svg>
+                                Copy
+                            </button> <button
                                 class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
                     </div>
                 </div>
                 <!-- NID  -->
                 <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
-                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart">
-        <path
-            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
-    </svg>
+                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-heart-icon lucide-heart">
+                            <path
+                                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                        </svg>
                     </button>
                     <div class="card-body">
                         <div class="flex items-center gap-3">
@@ -247,17 +334,29 @@
                             </div>
                         </div>
                         <p class="text-xl md:text-2xl font-bold mt-4">105</p>
-                        <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
+                        <div class="flex gap-2 mt-4">  <button class="btn btn-sm copyText">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-files-icon lucide-files">
+                                    <path
+                                        d="M15 2a2 2 0 0 1 1.414.586l4 4A2 2 0 0 1 21 8v7a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
+                                    <path d="M15 2v4a2 2 0 0 0 2 2h4" />
+                                    <path d="M5 7a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 1.732-1" />
+                                </svg>
+                                Copy
+                            </button> <button
                                 class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
                     </div>
                 </div>
                 <!-- child support  -->
                 <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
-                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart">
-        <path
-            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
-    </svg>
+                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-heart-icon lucide-heart">
+                            <path
+                                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                        </svg>
                     </button>
                     <div class="card-body">
                         <div class="flex items-center gap-3">
@@ -269,7 +368,17 @@
                             </div>
                         </div>
                         <p class="text-xl md:text-2xl font-bold mt-4">999</p>
-                        <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
+                        <div class="flex gap-2 mt-4">  <button class="btn btn-sm copyText">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-files-icon lucide-files">
+                                    <path
+                                        d="M15 2a2 2 0 0 1 1.414.586l4 4A2 2 0 0 1 21 8v7a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
+                                    <path d="M15 2v4a2 2 0 0 0 2 2h4" />
+                                    <path d="M5 7a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 1.732-1" />
+                                </svg>
+                                Copy
+                            </button> <button
                                 class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
                     </div>
                 </div>
