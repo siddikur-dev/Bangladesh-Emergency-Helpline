@@ -90,11 +90,37 @@ for (const callBtn of allCallingBtns) {
   callBtn.addEventListener("click", function () {
     const card = this.closest(".card");
 
-    // card এর ভেতরের helplines এর number না
+    // get values
     const helpline = card.querySelector(".helplines").innerText;
     const cardTitle = card.querySelector(".cardTitleText").innerText;
 
-    // alert দেখাও
+    // alert
     alert(`📞 Calling ${cardTitle} ${helpline}...`);
+
+    // get history container
+    const appendChildDiv = document.getElementById("historyContainer");
+
+    // create new history record
+    const historyItem = document.createElement("div");
+    historyItem.className =
+      "flex justify-between space-y-2 bg-[#91a791] p-4 rounded-md text-black font-medium";
+    historyItem.innerHTML = `
+      <div>
+        <p class="text-sm sm:text-base">${cardTitle}</p>
+        <p class="text-xs sm:text-sm">${helpline}</p>
+      </div>
+      <span class="text-xs sm:text-sm">${new Date().toLocaleTimeString()}</span>
+    `;
+
+    // append instead of replacing
+    appendChildDiv.appendChild(historyItem);
   });
 }
+
+// clear all history
+const ClearBtn = document
+  .getElementById("ClearBtn")
+  .addEventListener("click", function () {
+    const appendChildDiv = document.getElementById("historyContainer");
+    appendChildDiv.innerHTML = "";
+  });
