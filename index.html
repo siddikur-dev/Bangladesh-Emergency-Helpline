@@ -8,6 +8,10 @@
     <!-- Tailwind & Daisy UI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Lucide Icon -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -26,9 +30,10 @@
                     </span>
                 </a>
             </div>
+            <!-- right side -->
             <div class="flex gap-2">
                 <div class="rounded-3xl py-2 px-5 bg-green-200 border-none flex items-center">
-                    <span class="px-2 font-bold text-sm sm:text-base">0</span>
+                    <span id="heart" class="px-2 font-bold text-sm sm:text-base">0</span>
                     <img class="w-4" src="./assets/heart.png" alt="">
                 </div>
                 <div class="rounded-3xl py-2 px-3 bg-green-200 border-none flex items-center">
@@ -55,216 +60,252 @@
             </div>
         </div>
     </header>
+    <!-- empty -->
+    
+
+    <!--  -->
 
     <main class=" bg-[#f5fff6]">
         <!-- Main Grid -->
-        <div class="container mx-auto p-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div class="container mx-auto p-4 grid grid-cols-1 md:grid-cols-4 gap-4">
 
-                <!-- বাম কলাম -->
-                <div class="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <!-- Emergency Service  -->
-                    <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
-                        <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <i
-                                data-lucide="heart"></i> </button>
-                        <div class="card-body">
-                            <div class="flex items-center gap-3">
-                                <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center"> <img
-                                        src="./assets/emergency.png" alt=""> </div>
-                                <div>
-                                    <h2 class="font-bold text-sm sm:text-base md:text-lg"> Emergency Service</h2>
-                                    <p class="text-xs sm:text-sm text-gray-500">Emergency</p>
-                                </div>
+            <!-- Left column -->
+            <div class="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Emergency Service  -->
+                <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
+                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart">
+        <path
+            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+    </svg>
+                    </button>
+                    <div class="card-body">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center"> <img
+                                    src="./assets/emergency.png" alt=""> </div>
+                            <div>
+                                <h2 class="font-bold text-sm sm:text-base md:text-lg"> Emergency Service</h2>
+                                <p class="text-xs sm:text-sm text-gray-500">Emergency</p>
                             </div>
-                            <p class="text-xl md:text-2xl font-bold mt-4">999</p>
-                            <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
-                                    class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
                         </div>
+                        <p class="text-xl md:text-2xl font-bold mt-4">999</p>
+                        <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
+                                class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
                     </div>
-
-                    <!-- Police  -->
-                    <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
-                        <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <i
-                                data-lucide="heart"></i> </button>
-                        <div class="card-body">
-                            <div class="flex items-center gap-3">
-                                <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center"> <img
-                                        src="./assets/police.png" alt=""> </div>
-                                <div>
-                                    <h2 class="font-bold text-sm sm:text-base md:text-lg"> Police</h2>
-                                    <p class="text-xs sm:text-sm text-gray-500">police.gov.bd</p>
-                                </div>
-                            </div>
-                            <p class="text-xl md:text-2xl font-bold mt-4">999</p>
-                            <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
-                                    class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
-                        </div>
-                    </div>
-                    <!-- Fire Service & Civil   -->
-                    <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
-                        <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <i
-                                data-lucide="heart"></i> </button>
-                        <div class="card-body">
-                            <div class="flex items-center gap-3">
-                                <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center"> <img
-                                        src="./assets/fire-service.png" alt=""> </div>
-                                <div>
-                                    <h2 class="font-bold text-sm sm:text-base md:text-lg">Fire Service & Civil Defense
-                                    </h2>
-                                    <p class="text-xs sm:text-sm text-gray-500">fireservice.gov.bd</p>
-                                </div>
-                            </div>
-                            <p class="text-xl md:text-2xl font-bold mt-4">16163</p>
-                            <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
-                                    class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
-                        </div>
-                    </div>
-                    <!-- Ambulance  -->
-                    <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
-                        <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <i
-                                data-lucide="heart"></i> </button>
-                        <div class="card-body">
-                            <div class="flex items-center gap-3">
-                                <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center"> <img
-                                        src="./assets/ambulance.png" alt=""> </div>
-                                <div>
-                                    <h2 class="font-bold text-sm sm:text-base md:text-lg"> Ambulance Service </h2>
-                                    <p class="text-xs sm:text-sm text-gray-500">Emergency</p>
-                                </div>
-                            </div>
-                            <p class="text-xl md:text-2xl font-bold mt-4">9331431</p>
-                            <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
-                                    class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
-                        </div>
-                    </div>
-                    <!-- Railway Central Helpline  -->
-                    <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
-                        <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <i
-                                data-lucide="heart"></i> </button>
-                        <div class="card-body">
-                            <div class="flex items-center gap-3">
-                                <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center"> <img
-                                        src="./assets/Bangladesh-Railway.png" alt=""> </div>
-                                <div>
-                                    <h2 class="font-bold text-sm sm:text-base md:text-lg">Railway Central Helpline</h2>
-                                    <p class="text-xs sm:text-sm text-gray-500">railway.gov.bd</p>
-                                </div>
-                            </div>
-                            <p class="text-xl md:text-2xl font-bold mt-4">131</p>
-                            <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
-                                    class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
-                        </div>
-                    </div>
-                    <!-- child and women support  -->
-                    <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
-                        <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <i
-                                data-lucide="heart"></i> </button>
-                        <div class="card-body">
-                            <div class="flex items-center gap-3">
-                                <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center"> <img
-                                        src="./assets/c.jpg" alt=""> </div>
-                                <div>
-                                    <h2 class="font-bold text-sm sm:text-base md:text-lg">Women and child support</h2>
-                                    <p class="text-xs sm:text-sm text-gray-500">Emergency</p>
-                                </div>
-                            </div>
-                            <p class="text-xl md:text-2xl font-bold mt-4">10921</p>
-                            <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
-                                    class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
-                        </div>
-                    </div>
-
-
-                    <!-- Brack  -->
-                    <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
-                        <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <i
-                                data-lucide="heart"></i> </button>
-                        <div class="card-body">
-                            <div class="flex items-center gap-3">
-                                <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center"> <img
-                                        src="./assets/brac.png" alt=""> </div>
-                                <div>
-                                    <h2 class="font-bold text-sm sm:text-base md:text-lg">Brack</h2>
-                                    <p class="text-xs sm:text-sm text-gray-500">brack.net</p>
-                                </div>
-                            </div>
-                            <p class="text-xl md:text-2xl font-bold mt-4">612</p>
-                            <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
-                                    class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
-                        </div>
-                    </div>
-                    <!-- NID  -->
-                    <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
-                        <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <i
-                                data-lucide="heart"></i> </button>
-                        <div class="card-body">
-                            <div class="flex items-center gap-3">
-                                <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center"> <img
-                                        src="./assets/NID.png" alt=""> </div>
-                                <div>
-                                    <h2 class="font-bold text-sm sm:text-base md:text-lg"> NID Service</h2>
-                                    <p class="text-xs sm:text-sm text-gray-500">nid.gov.bd</p>
-                                </div>
-                            </div>
-                            <p class="text-xl md:text-2xl font-bold mt-4">105</p>
-                            <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
-                                    class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
-                        </div>
-                    </div>
-                    <!-- child support  -->
-                    <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
-                        <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <i
-                                data-lucide="heart"></i> </button>
-                        <div class="card-body">
-                            <div class="flex items-center gap-3">
-                                <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center"> <img
-                                        src="./assets/emergency.png" alt=""> </div>
-                                <div>
-                                    <h2 class="font-bold text-sm sm:text-base md:text-lg"> child support</h2>
-                                    <p class="text-xs sm:text-sm text-gray-500">Emergency</p>
-                                </div>
-                            </div>
-                            <p class="text-xl md:text-2xl font-bold mt-4">999</p>
-                            <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
-                                    class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
-                        </div>
-                    </div>
-
-
                 </div>
 
-                <!-- ডান কলাম (ফিক্সড) -->
-                <div class="md:col-span-1">
-                    <div class="sticky top-4">
-                        <div class="card bg-white shadow rounded-xl">
-                            <div class="card-body">
-                                <h2 class="font-bold flex items-center gap-2 text-base sm:text-lg">
-                                    <i data-lucide="clock"></i> Call History
+                <!-- Police  -->
+                <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
+                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart">
+        <path
+            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+    </svg>
+                    </button>
+                    <div class="card-body">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center"> <img
+                                    src="./assets/police.png" alt=""> </div>
+                            <div>
+                                <h2 class="font-bold text-sm sm:text-base md:text-lg"> Police</h2>
+                                <p class="text-xs sm:text-sm text-gray-500">police.gov.bd</p>
+                            </div>
+                        </div>
+                        <p class="text-xl md:text-2xl font-bold mt-4">999</p>
+                        <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
+                                class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
+                    </div>
+                </div>
+                <!-- Fire Service & Civil   -->
+                <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
+                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart">
+        <path
+            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+    </svg>
+                    </button>
+                    <div class="card-body">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center"> <img
+                                    src="./assets/fire-service.png" alt=""> </div>
+                            <div>
+                                <h2 class="font-bold text-sm sm:text-base md:text-lg">Fire Service & Civil Defense
                                 </h2>
-                                <div class="mt-4 space-y-3">
-                                    <div class="flex justify-between">
-                                        <div>
-                                            <p class="font-medium text-sm sm:text-base">Fire Service Number</p>
-                                            <p class="text-xs sm:text-sm text-gray-500">999</p>
-                                        </div>
-                                        <span class="text-xs sm:text-sm text-gray-500">11:36:58 AM</span>
-                                    </div>
-                                    <!-- আরও history items -->
-                                </div>
+                                <p class="text-xs sm:text-sm text-gray-500">fireservice.gov.bd</p>
                             </div>
                         </div>
+                        <p class="text-xl md:text-2xl font-bold mt-4">16163</p>
+                        <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
+                                class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
                     </div>
                 </div>
+                <!-- Ambulance  -->
+                <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
+                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart">
+        <path
+            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+    </svg>
+                    </button>
+                    <div class="card-body">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center"> <img
+                                    src="./assets/ambulance.png" alt=""> </div>
+                            <div>
+                                <h2 class="font-bold text-sm sm:text-base md:text-lg"> Ambulance Service </h2>
+                                <p class="text-xs sm:text-sm text-gray-500">Emergency</p>
+                            </div>
+                        </div>
+                        <p class="text-xl md:text-2xl font-bold mt-4">9331431</p>
+                        <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
+                                class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
+                    </div>
+                </div>
+                <!-- Railway Central Helpline  -->
+                <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
+                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart">
+        <path
+            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+    </svg>
+                    </button>
+                    <div class="card-body">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center"> <img
+                                    src="./assets/Bangladesh-Railway.png" alt=""> </div>
+                            <div>
+                                <h2 class="font-bold text-sm sm:text-base md:text-lg">Railway Central Helpline</h2>
+                                <p class="text-xs sm:text-sm text-gray-500">railway.gov.bd</p>
+                            </div>
+                        </div>
+                        <p class="text-xl md:text-2xl font-bold mt-4">131</p>
+                        <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
+                                class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
+                    </div>
+                </div>
+                <!-- child and women support  -->
+                <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
+                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart">
+        <path
+            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+    </svg>
+                    </button>
+                    <div class="card-body">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center"> <img
+                                    src="./assets/c.jpg" alt=""> </div>
+                            <div>
+                                <h2 class="font-bold text-sm sm:text-base md:text-lg">Women and child support</h2>
+                                <p class="text-xs sm:text-sm text-gray-500">Emergency</p>
+                            </div>
+                        </div>
+                        <p class="text-xl md:text-2xl font-bold mt-4">10921</p>
+                        <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
+                                class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
+                    </div>
+                </div>
+
+
+                <!-- Brack  -->
+                <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
+                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart">
+        <path
+            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+    </svg>
+                    </button>
+                    <div class="card-body">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center"> <img
+                                    src="./assets/brac.png" alt=""> </div>
+                            <div>
+                                <h2 class="font-bold text-sm sm:text-base md:text-lg">Brack</h2>
+                                <p class="text-xs sm:text-sm text-gray-500">brack.net</p>
+                            </div>
+                        </div>
+                        <p class="text-xl md:text-2xl font-bold mt-4">612</p>
+                        <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
+                                class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
+                    </div>
+                </div>
+                <!-- NID  -->
+                <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
+                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart">
+        <path
+            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+    </svg>
+                    </button>
+                    <div class="card-body">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center"> <img
+                                    src="./assets/NID.png" alt=""> </div>
+                            <div>
+                                <h2 class="font-bold text-sm sm:text-base md:text-lg"> NID Service</h2>
+                                <p class="text-xs sm:text-sm text-gray-500">nid.gov.bd</p>
+                            </div>
+                        </div>
+                        <p class="text-xl md:text-2xl font-bold mt-4">105</p>
+                        <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
+                                class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
+                    </div>
+                </div>
+                <!-- child support  -->
+                <div class="card bg-white shadow hover:shadow-lg hover:scale-102 transition rounded-xl relative ">
+                    <button class="absolute top-3 right-3 text-gray-400 hover:text-red-500"> <svg id="heartIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart">
+        <path
+            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+    </svg>
+                    </button>
+                    <div class="card-body">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center"> <img
+                                    src="./assets/emergency.png" alt=""> </div>
+                            <div>
+                                <h2 class="font-bold text-sm sm:text-base md:text-lg"> child support</h2>
+                                <p class="text-xs sm:text-sm text-gray-500">Emergency</p>
+                            </div>
+                        </div>
+                        <p class="text-xl md:text-2xl font-bold mt-4">999</p>
+                        <div class="flex gap-2 mt-4"> <button class="btn btn-sm">📋 Copy</button> <button
+                                class="btn btn-sm bg-green-600 text-white">📞 Call</button> </div>
+                    </div>
+                </div>
+
 
             </div>
+
+            <!-- right column-->
+            <div class="md:col-span-1">
+                <div class="sticky top-4">
+                    <div class="card bg-white shadow rounded-xl">
+                        <div class="card-body">
+                            <h2 class="font-bold flex items-center gap-2 text-base sm:text-lg">
+                                <i data-lucide="clock"></i> Call History
+                            </h2>
+                            <div class="mt-4 space-y-3">
+                                <div class="flex justify-between">
+                                    <div>
+                                        <p class="font-medium text-sm sm:text-base">Fire Service Number</p>
+                                        <p class="text-xs sm:text-sm text-gray-500">999</p>
+                                    </div>
+                                    <span class="text-xs sm:text-sm text-gray-500">11:36:58 AM</span>
+                                </div>
+                                <!-- আরও history items -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <!-- Lucide Init -->
-        <script src="https://unpkg.com/lucide@latest"></script>
-        <script>
-            lucide.createIcons();
-        </script>
+
     </main>
+    <!-- Lucide Init -->
+    <script src="./js/index.js"></script>
 
 </body>
 
