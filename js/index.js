@@ -1,4 +1,4 @@
-//String To Number Convert Function
+// String To Number Convert Function
 function strToNumber(id) {
   const string = document.getElementById(id);
   const numberConvert = string.innerText;
@@ -10,23 +10,16 @@ const heartIcons = document.getElementsByClassName("lucide-heart");
 
 for (const heartIcon of heartIcons) {
   heartIcon.addEventListener("click", function () {
-    //get heart from navbar
     const navbarHeart = document.getElementById("heart");
-
-    //numberConverted
     const heartCount = strToNumber("heart");
-    const singleCount = heartCount + 1;
-    navbarHeart.innerText = singleCount;
+    navbarHeart.innerText = heartCount + 1;
   });
 }
 
 // textCopyFunction
-
 function setupCopyButtons() {
   const copyButtons = document.getElementsByClassName("copyText");
   const allCopiedDiv = document.getElementById("allCopied");
-
-  // বর্তমান count বের করো
   let copyCount = parseInt(allCopiedDiv.innerText) || 0;
 
   for (let i = 0; i < copyButtons.length; i++) {
@@ -40,7 +33,6 @@ function setupCopyButtons() {
       navigator.clipboard
         .writeText(numberText)
         .then(() => {
-          // Button update
           const originalText = btn.innerText;
           btn.innerText = "Copied!";
           btn.classList.add("bg-gray-200");
@@ -49,7 +41,6 @@ function setupCopyButtons() {
             btn.classList.remove("bg-gray-200");
           }, 3000);
 
-          // Counter update
           copyCount++;
           allCopiedDiv.innerText = copyCount + " Copy";
         })
@@ -57,50 +48,37 @@ function setupCopyButtons() {
     });
   }
 }
-
 setupCopyButtons();
 
-//Calling Function
-
-//get all id from
-function getInnerText(id) {
-  const allId = document.getElementById(id).innerText;
-  return allId;
-}
-
-// get all call button by className
-
+// Calling Function
 const allCallingBtn = document.getElementsByClassName("callBtn");
 
 for (const callBtn of allCallingBtn) {
   callBtn.addEventListener("click", function () {
-    //get coin from navbar
     const availableCoin = document.getElementById("availableCoin");
-    let currentCoin = strToNumber("availableCoin");
+    let currentCoin = parseInt(availableCoin.innerText, 10);
+
+    // balance check
+    if (currentCoin <= 0) {
+      alert("❌ Unavailable coin, please recharge");
+      availableCoin.innerText = 0;
+      return;
+    }
+
+    // minus 20
     const remainingCoin = currentCoin - 20;
     availableCoin.innerText = remainingCoin;
-  });
-}
 
-//alert function
-
-const allCallingBtns = document.getElementsByClassName("callBtn");
-
-for (const callBtn of allCallingBtns) {
-  callBtn.addEventListener("click", function () {
+    // get parent card
     const card = this.closest(".card");
-
-    // get values
     const helpline = card.querySelector(".helplines").innerText;
     const cardTitle = card.querySelector(".cardTitleText").innerText;
 
     // alert
     alert(`📞 Calling ${cardTitle} ${helpline}...`);
 
-    // get history container
+    // history add
     const appendChildDiv = document.getElementById("historyContainer");
-
-    // create new history record
     const historyItem = document.createElement("div");
     historyItem.className =
       "flex justify-between space-y-2 bg-[#91a791] p-4 rounded-md text-black font-medium";
@@ -111,16 +89,12 @@ for (const callBtn of allCallingBtns) {
       </div>
       <span class="text-xs sm:text-sm">${new Date().toLocaleTimeString()}</span>
     `;
-
-    // append instead of replacing
     appendChildDiv.appendChild(historyItem);
   });
 }
 
 // clear all history
-const ClearBtn = document
-  .getElementById("ClearBtn")
-  .addEventListener("click", function () {
-    const appendChildDiv = document.getElementById("historyContainer");
-    appendChildDiv.innerHTML = "";
-  });
+document.getElementById("ClearBtn").addEventListener("click", function () {
+  const appendChildDiv = document.getElementById("historyContainer");
+  appendChildDiv.innerHTML = "";
+});
