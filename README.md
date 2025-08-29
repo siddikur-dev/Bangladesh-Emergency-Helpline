@@ -1,4 +1,4 @@
-Javascript QNA
+Javascript QNA 
 
 What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
 getElementById: Returns a single element with the specified ID (unique). getElementsByClassName: Returns a live HTMLCollection of elements with the specified class name. querySelector: Returns the first element that matches a CSS selector. querySelectorAll: Returns a static NodeList of all elements matching a CSS selector.
