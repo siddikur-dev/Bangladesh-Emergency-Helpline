@@ -1,33 +1,16 @@
-# Bangladesh-Emergency-Helpline
+Javascript QNA
 
-"A centralized web portal for quick access to all emergency hotline numbers in Bangladesh."
-JavaScript Q&A
+What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+getElementById: Returns a single element with the specified ID (unique). getElementsByClassName: Returns a live HTMLCollection of elements with the specified class name. querySelector: Returns the first element that matches a CSS selector. querySelectorAll: Returns a static NodeList of all elements matching a CSS selector.
 
-1. Difference between getElementById, getElementsByClassName, querySelector / querySelectorAll
+How do you create and insert a new element into the DOM?
+Use document.createElement() to create the element, then appendChild() or insertBefore() to insert it into the DOM.
 
-getElementById → selects one element by id.
+What is Event Bubbling and how does it work?
+Event Bubbling is a process where an event starts from the target element and bubbles up to its parent elements in the DOM hierarchy.
 
-getElementsByClassName → returns all elements with class (HTMLCollection, live).
+What is Event Delegation in JavaScript? Why is it useful?
+Event Delegation is a technique where a single event listener is added to a parent element to handle events from its child elements. It’s useful for improving performance and handling dynamically added elements.
 
-querySelector → returns first match (CSS selector).
-
-querySelectorAll → returns all matches (NodeList, static).
-
-2. How to create and insert a new element
-   const div = document.createElement("div");
-   div.innerText = "Hello!";
-   document.body.appendChild(div);
-
-3. Event Bubbling
-
-Event travels from the target element → parent → up to document.
-
-4. Event Delegation
-
-Attach one event listener to a parent to handle events for its child elements. Useful for performance + dynamic elements.
-
-5. preventDefault() vs stopPropagation()
-
-preventDefault() → stops default action (form submit, link navigation).
-
-stopPropagation() → stops event from bubbling to parents.
+What is the difference between preventDefault() and stopPropagation() methods?
+preventDefault() stops the browser’s default behavior for an event. stopPropagation() prevents the event from bubbling up to parent elements.
