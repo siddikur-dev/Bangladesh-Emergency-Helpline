@@ -81,7 +81,7 @@ for (const callBtn of allCallingBtn) {
     const appendChildDiv = document.getElementById("historyContainer");
     const historyItem = document.createElement("div");
     historyItem.className =
-      "flex justify-between space-y-2 bg-[#91a791] p-4 rounded-md text-black font-medium";
+      "flex justify-between space-y-2 bg-[#d3e3d3] p-4 rounded-md text-black font-medium";
     historyItem.innerHTML = `
       <div>
         <p class="text-sm sm:text-base">${cardTitle}</p>
@@ -98,3 +98,4 @@ document.getElementById("ClearBtn").addEventListener("click", function () {
   const appendChildDiv = document.getElementById("historyContainer");
   appendChildDiv.innerHTML = "";
 });
+
